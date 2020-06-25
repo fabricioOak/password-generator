@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <form name="form1" action="form-action.php" id="c">
+            <div class="types">
+            <input type="checkbox" value="on" id="min"> Lower case
+            <input type="checkbox" value="on" id ="max"> Upper case
+            <input type="checkbox" value="on"  id="number"> Numbers
+            <input type="checkbox" value="on" id="esp"> Specials
+            </div>
+
+            <div class="lenght">
+                <input type="checkbox" value ="on" id="eight">Eight numbers
+                <input type="checkbox" value ="on" id="sixteen">Sixteen numbers
+            </div>
+            
+        </form>
+    </header>
+
+    <div class="inputBox">
+        <h2>Password Generator</h2>
+        <input type="text" name="" placeholder="Create a Password" id="password" readonly="">
+        <button id="btn" onclick="generate();">Generate Password</button>
+        
+    </div>
+
+    <script>
+        function generate(){
+            var chars = "";
+            var passlength;
+            var password = "";
+            var min = document.getElementById("min");
+            var max = document.getElementById("max");
+            var number = document.getElementById("number");
+            var esp = document.getElementById("esp");
+            var eigth = document.getElementById("eight");
+            var sixteen = document.getElementById("sixteen");
+
+            
+            if (min.checked == true){
+                chars = chars + "abcdefghijklmnopqrstuvwxyz";
+            }
+            if (max.checked == true){
+                chars = chars + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            }
+            if (number.checked == true){
+                chars = chars + "1234567890";
+            }
+            if (esp.checked == true){
+                chars = chars + ",.!@#$%&*";
+            }
+
+            console.log(chars);
+            
+            if (eigth.checked == true){
+                passlength = 8;
+            }
+            if (sixteen.checked == true){
+                passlength = 16;
+            }
+            for (var i = 0; i < passlength; i++){
+                var randomNum = Math.floor(Math.random() * chars.length);
+                password += chars.substring(randomNum, randomNum + 1);
+            }
+            document.getElementById("password").value = password;
+        }
+    </script>
+</body>
+</html>
