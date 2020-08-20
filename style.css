@@ -4,18 +4,20 @@
 	user-select: none;
 }
 
-body {
+#fill {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
-	background-color: #f8f8f8;
+	box-sizing: border-box;
 }
 
 .inputBox {
-	position: relative;
-	transform: translate(25%, 0%);
-	z-index: 1;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .inputBox h2 {
@@ -24,17 +26,14 @@ body {
 }
 
 .inputBox input {
-	position: relative;
-	width: 100%;
-	height: 60%;
+	width: auto;
 	border: none;
 	margin: 15px 0 22px;
 	padding: 0 24px;
-	background-color: transparent;
+	background-color: none;
 	outline: none;
 	font-size: 44px;
 	letter-spacing: 3px;
-	box-sizing: border-box;
 	border-radius: 8px;
 	color: #333;
 }
@@ -43,7 +42,7 @@ body {
 	letter-spacing: 0px;
 }
 
-.inputBox #btn {
+.inputBox #btnGen {
 	position: relative;
 	cursor: pointer;
 	color: white;
@@ -53,15 +52,21 @@ body {
 	padding: 10px 15px;
 	border-radius: 8px;
 }
-
-header {
+.inputBox #btnCopy {
+	position: relative;
+	cursor: pointer;
+	color: white;
 	background-color: #333;
-	height: auto;
-	width: auto;
+	font-size: 16px;
+	display: inline-block;
+	padding: 5px 8px;
+	border-radius: 4px;
+}
+.checkBox {
+	height: 100px;
+	width: 600px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 8px;
-	padding: 9px;
 }
