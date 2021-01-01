@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <form name="form1" action="form-action.php" id="c">
-            <div class="types">
-            <input type="checkbox" value="on" id="min"> Lower case
-            <input type="checkbox" value="on" id ="max"> Upper case
-            <input type="checkbox" value="on"  id="number"> Numbers
-            <input type="checkbox" value="on" id="esp"> Specials
-            </div>
+    <div class="full-body">
+        <div class="inputBox">
+            <h2>Password Generator</h2>
+            <input type="text" name="" placeholder="Create a Password" id="password" readonly="">
+            <button class="btn" onclick="generate()">Generate Password</button>
+            <button class="btn" onclick="copyText()">Copy to Clipboard</button>
+        </div>
 
-            <div class="lenght">
-                <input type="checkbox" value ="on" id="eight">Eight numbers
-                <input type="checkbox" value ="on" id="sixteen">Sixteen numbers
-            </div>
-            
-        </form>
-    </header>
-
-    <div class="inputBox">
-        <h2>Password Generator</h2>
-        <input type="text" name="" placeholder="Create a Password" id="password" readonly="">
-        <button id="btn" onclick="generate();">Generate Password</button>
-        
+        <div class="container-form">
+            <form name="form1" action="form-action.php" id="c">
+                <div class="types">
+                    <input type="checkbox" id="min"> Lower case
+                    <input type="checkbox" id ="max"> Upper case
+                    <input type="checkbox" id="number"> Numbers
+                    <input type="checkbox" id="esp"> Specials
+                </div>
+                <div class="lenght">
+                    <input type="radio" name="length" id="eight">Eight numbers
+                    <input type="radio" name="length" id="sixteen">Sixteen numbers
+                </div>
+            </form>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

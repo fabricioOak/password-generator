@@ -20,7 +20,7 @@ function generate(){
         chars = chars + "1234567890";
     }
     if (esp.checked == true){
-        chars = chars + ",.!@#$%&*";
+        chars = chars + "@%+/'!#$^?:.)(}{][~-_'";
     }
 
     console.log(chars);
@@ -36,4 +36,17 @@ function generate(){
         password += chars.substring(randomNum, randomNum + 1);
     }
     document.getElementById("password").value = password;
+}
+
+function copyText() {
+    let copyTxt = document.getElementById('password');
+
+    copyTxt.select();
+    copyTxt.setSelectionRange(0,99999);
+
+    document.execCommand('copy');
+
+    if (copyTxt.value != '') {
+    alert('Text Copied: ' + copyTxt.value);   
+    }
 }

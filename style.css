@@ -2,18 +2,22 @@
 	margin: 0;
 	padding: 0;
 	user-select: none;
+	font-family: 'Arimo', sans-serif;
 }
-
-#fill {
+body{
+	background-color: #DBEAFE;
+}
+.full-body{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	box-sizing: border-box;
+	width: 100%;
+	height: 100vh;
+	margin: auto;
 }
 
 .inputBox {
-	width: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -21,46 +25,50 @@
 }
 
 .inputBox h2 {
-	font-size: 60px;
-	color: black;
+	font-size: 5em;
+	color: #1F2937;
+	text-transform: uppercase;
 }
 
 .inputBox input {
+	padding: .3em;
+	cursor: inherit;
 	width: auto;
 	border: none;
 	margin: 15px 0 22px;
-	padding: 0 24px;
 	background-color: none;
 	outline: none;
-	font-size: 44px;
+	font-size: 3.3em;
 	letter-spacing: 3px;
-	border-radius: 8px;
 	color: #333;
+	text-align: center;
+	border-radius: 1.5rem;
+	box-shadow: inset 0 0 5px #000000;
 }
 
 .inputBox input::placeholder {
 	letter-spacing: 0px;
 }
 
-.inputBox #btnGen {
-	position: relative;
-	cursor: pointer;
-	color: white;
-	background-color: #333;
-	font-size: 32px;
-	display: inline-block;
-	padding: 10px 15px;
-	border-radius: 8px;
+.inputBox .btn {
+	cursor:  pointer;
+	border: none;
+	margin: .4em 0;
+	width: 320px;
+	padding: .5em;
+	color: #F3F4F6;
+	font-size: 1.4em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-color: #2563EB;
+	border-radius: 0.5rem;
+	transition-duration: 300ms;
+	box-shadow: 0 8px 6px -6px black;
 }
-.inputBox #btnCopy {
-	position: relative;
-	cursor: pointer;
-	color: white;
-	background-color: #333;
-	font-size: 16px;
-	display: inline-block;
-	padding: 5px 8px;
-	border-radius: 4px;
+
+.inputBox .btn:hover{
+	background-color: #5B21B6;
 }
 .checkBox {
 	height: 100px;
@@ -70,3 +78,38 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.container-form{
+	margin: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Responsive Area*/
+
+/*Tablets*/
+
+@media screen and (max-width: 768px) {
+ 	.inputBox h2 {
+ 		text-align: center;
+ 	}
+
+ 	.inputBox input {
+ 		width: 80%;
+ 	}
+ }
+
+ @media screen and (max-width: 425px) {
+ 	.inputBox h2 {
+ 		font-size: 3em;
+ 	}
+ 	.inputBox input{
+ 		font-size: 1.7em;
+ 	}
+
+ 	.inputBox .btn{
+ 		font-size: .8em;
+ 		width: 150px;
+ 	}
+ }
