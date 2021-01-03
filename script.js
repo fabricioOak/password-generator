@@ -2,11 +2,11 @@ function generate(){
     var chars = "";
     var passlength;
     var password = "";
-    var min = document.getElementById("min");
+    var min = document.getElementById('min');
     var max = document.getElementById("max");
     var number = document.getElementById("number");
     var esp = document.getElementById("esp");
-    var eigth = document.getElementById("eight");
+    var eight = document.getElementById("eight");
     var sixteen = document.getElementById("sixteen");
 
     
@@ -25,7 +25,7 @@ function generate(){
 
     console.log(chars);
     
-    if (eigth.checked == true){
+    if (eight.checked == true){
         passlength = 8;
     }
     if (sixteen.checked == true){

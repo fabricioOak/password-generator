@@ -18,20 +18,40 @@
         </div>
 
         <div class="container-form">
-            <form name="form1" action="form-action.php" id="c">
-                <div class="types">
-                    <input type="checkbox" id="min"> Lower case
-                    <input type="checkbox" id ="max"> Upper case
-                    <input type="checkbox" id="number"> Numbers
-                    <input type="checkbox" id="esp"> Specials
-                </div>
-                <div class="lenght">
-                    <input type="radio" name="length" id="eight">Eight numbers
-                    <input type="radio" name="length" id="sixteen">Sixteen numbers
-                </div>
-            </form>
-        </div>
+                <div class="container-types">
+                    <label class="character-types">Lower Case
+                        <input id="min" type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="character-types">Upper Case
+                      <input id="max" type="checkbox">
+                      <span class="checkmark"></span>
+                  </label>
+
+                  <label class="character-types">Numbers
+                      <input id="number" type="checkbox">
+                      <span class="checkmark"></span>
+                  </label>
+
+                  <label class="character-types">Special Characters
+                      <input id="esp" type="checkbox">
+                      <span class="checkmark"></span>
+                  </label>
+              </div>
+
+              <div class="container-types">
+                <label  class="length-types">Eight Numbers
+                    <input id="eight" type="radio" name="length">
+                    <span class="radio"></span>
+                </label>
+                <label class="length-types">Sixteen Numbers
+                    <input id="sixteen" type="radio" name="length">
+                    <span class="radio"></span>
+                </label>
+            </div>
     </div>
-    <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
