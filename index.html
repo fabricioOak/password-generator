@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="full-body">
-        <div class="inputBox">
-            <h2>Password Generator</h2>
-            <input type="text" name="" placeholder="Create a Password" id="password" readonly="">
-            <button class="btn" onclick="generate()">Generate Password</button>
-            <button class="btn" onclick="copyText()">Copy to Clipboard</button>
+      <div class="inputBox">
+        <h2>Password Generator</h2>
+        <input
+          type="text"
+          name=""
+          placeholder="Create a Password"
+          id="password"
+          readonly=""
+        />
+        <button class="btn" onclick="generate()">Generate Password</button>
+        <button class="btn" onclick="copyText()">Copy to Clipboard</button>
+      </div>
+
+      <div class="container-form">
+        <div class="container-types">
+          <label class="character-types"
+            >Lower Case
+            <input id="min" type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="character-types"
+            >Upper Case
+            <input id="max" type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="character-types"
+            >Numbers
+            <input id="number" type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="character-types"
+            >Special Characters
+            <input id="esp" type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
         </div>
 
-        <div class="container-form">
-                <div class="container-types">
-                    <label class="character-types">Lower Case
-                        <input id="min" type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="character-types">Upper Case
-                      <input id="max" type="checkbox">
-                      <span class="checkmark"></span>
-                  </label>
-
-                  <label class="character-types">Numbers
-                      <input id="number" type="checkbox">
-                      <span class="checkmark"></span>
-                  </label>
-
-                  <label class="character-types">Special Characters
-                      <input id="esp" type="checkbox">
-                      <span class="checkmark"></span>
-                  </label>
-              </div>
-
-              <div class="container-types">
-                <label  class="length-types">Eight Numbers
-                    <input id="eight" type="radio" name="length">
-                    <span class="radio"></span>
-                </label>
-                <label class="length-types">Sixteen Numbers
-                    <input id="sixteen" type="radio" name="length">
-                    <span class="radio"></span>
-                </label>
-            </div>
+        <div class="container-types">
+          <h2>Password Length</h2>
+          <input
+            type="range"
+            min="4"
+            max="24"
+            step="1"
+            onchange="updateTextInput(this.value)"
+          />
+          <input type="text" id="password-length" value="" readonly />
+        </div>
+      </div>
     </div>
-</div>
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
