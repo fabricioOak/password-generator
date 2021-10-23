@@ -22,7 +22,10 @@
           id="password"
           readonly=""
         />
-        <button class="btn" onclick="generate()">Generate Password</button>
+        <div id="alert"></div>
+        <button class="btn" onclick="generate();passwordVerify();">
+          Generate Password
+        </button>
         <button class="btn" onclick="copyText()">Copy to Clipboard</button>
       </div>
 
